@@ -13,7 +13,7 @@ class InActiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.all(0),
+      contentPadding: const EdgeInsets.all(0),
       leading: Image.asset(drawerItemModel.image),
       title: Text(
         drawerItemModel.title,
@@ -34,7 +34,7 @@ class ActiveDrawerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.all(0),
+      contentPadding: const EdgeInsets.all(0),
       leading: Image.asset(drawerItemModel.image),
       title: Text(
         drawerItemModel.title,

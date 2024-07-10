@@ -24,14 +24,14 @@ class CustomDrawer extends StatelessWidget {
         padding: const EdgeInsets.only(left: 28, right: 20),
         child: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: UserListTileInfo(
                 title: 'Khaled Gamal',
                 subTitle: 'kghaly@gmail.com',
                 image: Assets.imagesLogo2,
               ),
             ),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: SizedBox(
                 height: 8,
               ),
@@ -41,19 +41,19 @@ class CustomDrawer extends StatelessWidget {
               hasScrollBody: false,
               child: Column(
                 children: [
-                  Expanded(child: SizedBox()),
+                  const Expanded(child: SizedBox()),
                   InActiveDrawerItem(
                     drawerItemModel: DrawerItemModel(
                         image: Assets.imagesSetting2, title: 'Setting system'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   InActiveDrawerItem(
                     drawerItemModel: DrawerItemModel(
                         image: Assets.imagesLogout, title: 'Logout account'),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 48,
                   ),
                 ],
