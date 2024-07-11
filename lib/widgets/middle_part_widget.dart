@@ -7,18 +7,21 @@ class MiddlePartWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(
-        top: 40,
-        bottom: 20,
-      ),
+    return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: Column(
         children: [
-          Expanded(flex: 3, child: AllExpenses()),
+          SizedBox(
+            height: 40,
+          ),
+          AllExpenses(),
+          SizedBox(
+            height: 24,
+          ),
+          QuickInvoice(),
           SizedBox(
             height: 20,
           ),
-          Expanded(flex: 4, child: QuickInvoice()),
         ],
       ),
     );

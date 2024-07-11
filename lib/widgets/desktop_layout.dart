@@ -9,11 +9,17 @@ class DesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(flex: 1, child: CustomDrawer()),
+        Expanded(
+          flex: 1,
+          child: CustomDrawer(),
+        ),
         const SizedBox(
           width: 20,
         ),
-        const Expanded(flex: 2, child: MiddlePartWidget()),
+        const Expanded(
+          flex: 2,
+          child: MiddlePartWidget(),
+        ),
       ],
     );
   }

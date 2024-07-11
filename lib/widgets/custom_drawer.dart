@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/drawer_item_model.dart';
+import 'package:responsive_dashboard/models/user_info_model.dart';
 import 'package:responsive_dashboard/uitils/app_images.dart';
 import 'package:responsive_dashboard/widgets/active_inactive_darwer_item.dart';
 import 'package:responsive_dashboard/widgets/custom_list_drawer_items.dart';
@@ -9,11 +10,13 @@ class CustomDrawer extends StatelessWidget {
   CustomDrawer({super.key});
 
   final List<DrawerItemModel> drawerList = [
-    DrawerItemModel(image: Assets.imagesDashboard, title: 'Dashboard'),
-    DrawerItemModel(image: Assets.imagesTransaction, title: 'My Transaction'),
-    DrawerItemModel(image: Assets.imagesStatices, title: 'Statistics'),
-    DrawerItemModel(image: Assets.imagesWallet2, title: 'Wallet Account'),
-    DrawerItemModel(image: Assets.imagesMyinvestments, title: 'My Investment'),
+    const DrawerItemModel(image: Assets.imagesDashboard, title: 'Dashboard'),
+    const DrawerItemModel(
+        image: Assets.imagesTransaction, title: 'My Transaction'),
+    const DrawerItemModel(image: Assets.imagesStatices, title: 'Statistics'),
+    const DrawerItemModel(image: Assets.imagesWallet2, title: 'Wallet Account'),
+    const DrawerItemModel(
+        image: Assets.imagesMyinvestments, title: 'My Investment'),
   ];
 
   @override
@@ -26,10 +29,11 @@ class CustomDrawer extends StatelessWidget {
           slivers: [
             const SliverToBoxAdapter(
               child: UserListTileInfo(
+                  userInfoModel: UserInfoModel(
                 title: 'Khaled Gamal',
-                subTitle: 'kghaly@gmail.com',
+                subtitle: 'kghaly@gmail.com',
                 image: Assets.imagesLogo2,
-              ),
+              )),
             ),
             const SliverToBoxAdapter(
               child: SizedBox(
@@ -37,23 +41,23 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
             CustomListDrawerItems(drawerlist: drawerList),
-            SliverFillRemaining(
+            const SliverFillRemaining(
               hasScrollBody: false,
               child: Column(
                 children: [
-                  const Expanded(child: SizedBox()),
+                  Expanded(child: SizedBox()),
                   InActiveDrawerItem(
                     drawerItemModel: DrawerItemModel(
                         image: Assets.imagesSetting2, title: 'Setting system'),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
                   InActiveDrawerItem(
                     drawerItemModel: DrawerItemModel(
                         image: Assets.imagesLogout, title: 'Logout account'),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 48,
                   ),
                 ],
