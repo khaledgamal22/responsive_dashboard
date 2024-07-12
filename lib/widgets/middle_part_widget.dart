@@ -7,12 +7,12 @@ class MiddlePartWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Column(
         children: [
           SizedBox(
-            height: 40,
+            height: 20,
           ),
           AllExpenses(),
           SizedBox(
