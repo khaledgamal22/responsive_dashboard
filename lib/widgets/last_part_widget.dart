@@ -7,17 +7,17 @@ class LastPart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.vertical,
-      child: Column(
-        children: [
-          MyCardSection(),
-          SizedBox(
-            height: 24,
-          ),
-          IncomeSection(),
-        ],
-      ),
+    return Column(
+      children: [
+        SizedBox(
+          height: 40,
+        ),
+        MyCardSection(),
+        SizedBox(
+          height: 24,
+        ),
+        Expanded(child: IncomeSection()),
+      ],
     );
   }
 }

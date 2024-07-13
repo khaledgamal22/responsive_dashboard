@@ -45,21 +45,21 @@ class InActiveAllExpensesCard extends StatelessWidget {
           ),
           Text(
             cardModel.title,
-            style: AppStyle.styleSemibold16,
+            style: AppStyle.styleSemibold16(context),
           ),
           const SizedBox(
             height: 8,
           ),
           Text(
             cardModel.date,
-            style: AppStyle.styleRegular14,
+            style: AppStyle.styleRegular14(context),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
             cardModel.amount,
-            style: AppStyle.styleSemibold24,
+            style: AppStyle.styleSemibold24(context),
           ),
         ],
       ),
@@ -113,7 +113,7 @@ class ActiveAllExpensesCard extends StatelessWidget {
           ),
           Text(
             cardModel.title,
-            style: AppStyle.styleSemibold16.copyWith(
+            style: AppStyle.styleSemibold16(context).copyWith(
               color: Colors.white,
             ),
           ),
@@ -122,14 +122,16 @@ class ActiveAllExpensesCard extends StatelessWidget {
           ),
           Text(
             cardModel.date,
-            style: AppStyle.styleRegular14.copyWith(color: Colors.white),
+            style:
+                AppStyle.styleRegular14(context).copyWith(color: Colors.white),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
             cardModel.amount,
-            style: AppStyle.styleSemibold24.copyWith(color: Colors.white),
+            style:
+                AppStyle.styleSemibold24(context).copyWith(color: Colors.white),
           ),
         ],
       ),

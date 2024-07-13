@@ -20,17 +20,17 @@ class CustomTransactionItem extends StatelessWidget {
           contentPadding: EdgeInsets.zero,
           title: Text(
             transactionModel.title,
-            style: AppStyle.styleSemibold16,
+            style: AppStyle.styleSemibold16(context),
           ),
           subtitle: Text(
             transactionModel.subtitle,
-            style: AppStyle.styleRegular16.copyWith(
+            style: AppStyle.styleRegular16(context).copyWith(
               color: Color(0xffAAAAAA),
             ),
           ),
           trailing: Text(
             transactionModel.trailing,
-            style: AppStyle.styleSemibold20.copyWith(
+            style: AppStyle.styleSemibold20(context).copyWith(
               color: trailingColor ?? Color(0xff7DD97B),
             ),
           ),

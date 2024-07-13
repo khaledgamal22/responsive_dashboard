@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/income_model.dart';
 import 'package:responsive_dashboard/uitils/app_images.dart';
+import 'package:responsive_dashboard/uitils/size_config.dart';
+import 'package:responsive_dashboard/widgets/custom_income_chart.dart';
 import 'package:responsive_dashboard/widgets/income_info_item.dart';
 
 class IncomeInfo extends StatelessWidget {
@@ -24,28 +26,32 @@ class IncomeInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Image.asset(
-          Assets.imagesCircle,
-        ),
-        SizedBox(
-          width: 20,
-        ),
-        Expanded(
-          child: Column(
-            children: List.generate(
-              4,
-              (index) => Padding(
-                padding: const EdgeInsets.all(4),
-                child: IncomeInfoItem(
-                  incomeModel: incomelist[index],
+    double width = MediaQuery.sizeOf(context).width;
+
+    return width > SizeConfig.desktop && width < 1680
+        ? Expanded(child: CustomIncomeChart())
+        : Row(
+            children: [
+              Image.asset(
+                Assets.imagesCircle,
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Expanded(
+                child: Column(
+                  children: List.generate(
+                    4,
+                    (index) => Padding(
+                      padding: const EdgeInsets.all(4),
+                      child: IncomeInfoItem(
+                        incomeModel: incomelist[index],
+                      ),
+                    ),
+                  ),
                 ),
               ),
-            ),
-          ),
-        ),
-      ],
-    );
+            ],
+          );
   }
 }

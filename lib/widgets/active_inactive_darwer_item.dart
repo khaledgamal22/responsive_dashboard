@@ -15,9 +15,13 @@ class InActiveDrawerItem extends StatelessWidget {
     return ListTile(
       contentPadding: const EdgeInsets.all(0),
       leading: Image.asset(drawerItemModel.image),
-      title: Text(
-        drawerItemModel.title,
-        style: AppStyle.styleMedium16,
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: AlignmentDirectional.centerStart,
+        child: Text(
+          drawerItemModel.title,
+          style: AppStyle.styleMedium16(context),
+        ),
       ),
     );
   }
@@ -36,9 +40,13 @@ class ActiveDrawerItem extends StatelessWidget {
     return ListTile(
       contentPadding: const EdgeInsets.all(0),
       leading: Image.asset(drawerItemModel.image),
-      title: Text(
-        drawerItemModel.title,
-        style: AppStyle.styleBold16,
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: AlignmentDirectional.centerStart,
+        child: Text(
+          drawerItemModel.title,
+          style: AppStyle.styleBold16(context),
+        ),
       ),
       trailing: Container(
         width: 3.5,

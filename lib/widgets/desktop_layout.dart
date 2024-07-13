@@ -17,17 +17,31 @@ class DesktopLayout extends StatelessWidget {
         const SizedBox(
           width: 20,
         ),
-        const Expanded(
-          flex: 2,
-          child: MiddlePartWidget(),
-        ),
-        const SizedBox(
-          width: 20,
-        ),
-        const Expanded(
-          flex: 1,
-          child: LastPart(),
-        ),
+        Expanded(
+          flex: 3,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    const Expanded(
+                      flex: 2,
+                      child: MiddlePartWidget(),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    const Expanded(
+                      flex: 1,
+                      child: LastPart(),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        )
       ],
     );
   }

@@ -31,7 +31,7 @@ class TransactionHistorySection extends StatelessWidget {
           headtitle: 'Transaction History',
           tail: Text(
             'See all',
-            style: AppStyle.styleMedium16.copyWith(
+            style: AppStyle.styleMedium16(context).copyWith(
               color: Color(0xff4EB7F2),
             ),
           ),
@@ -41,7 +41,7 @@ class TransactionHistorySection extends StatelessWidget {
         ),
         Text(
           '13 April 2022',
-          style: AppStyle.styleMedium16.copyWith(
+          style: AppStyle.styleMedium16(context).copyWith(
             color: Color(0xffAAAAAA),
           ),
         ),

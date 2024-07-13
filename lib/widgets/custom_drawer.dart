@@ -22,6 +22,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.sizeOf(context).width * 0.6,
       color: Colors.white,
       child: Padding(
         padding: const EdgeInsets.only(left: 28, right: 20),
@@ -45,7 +46,10 @@ class CustomDrawer extends StatelessWidget {
               hasScrollBody: false,
               child: Column(
                 children: [
-                  Expanded(child: SizedBox()),
+                  Expanded(
+                      child: SizedBox(
+                    height: 30,
+                  )),
                   InActiveDrawerItem(
                     drawerItemModel: DrawerItemModel(
                         image: Assets.imagesSetting2, title: 'Setting system'),

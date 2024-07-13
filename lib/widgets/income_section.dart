@@ -10,7 +10,9 @@ class IncomeSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomBackGroundContainer(
-        child: IncomeWidget(), color: Colors.white);
+      child: IncomeWidget(),
+      color: Colors.white,
+    );
   }
 }
 

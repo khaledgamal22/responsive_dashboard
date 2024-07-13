@@ -19,7 +19,7 @@ class MyCard extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(top: 24, bottom: 24, right: 24),
+          padding: const EdgeInsets.only(top: 24, right: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -32,7 +32,7 @@ class MyCard extends StatelessWidget {
                       children: [
                         Text(
                           'Name card',
-                          style: AppStyle.styleRegular16.copyWith(
+                          style: AppStyle.styleRegular16(context).copyWith(
                             color: Colors.white,
                           ),
                         ),
@@ -41,7 +41,7 @@ class MyCard extends StatelessWidget {
                         ),
                         Text(
                           'khaled Gamal',
-                          style: AppStyle.styleMedium20,
+                          style: AppStyle.styleMedium20(context),
                         ),
                       ],
                     ),
@@ -61,14 +61,19 @@ class MyCard extends StatelessWidget {
               ),
               Text(
                 '0918 8124 0042 8129',
-                style: AppStyle.styleSemibold24.copyWith(
+                style: AppStyle.styleSemibold24(context).copyWith(
                   color: Colors.white,
                 ),
               ),
               Text(
                 '12/20 - 124',
-                style: AppStyle.styleRegular16.copyWith(
+                style: AppStyle.styleRegular16(context).copyWith(
                   color: Colors.white,
+                ),
+              ),
+              Flexible(
+                child: SizedBox(
+                  height: 12,
                 ),
               ),
             ],
