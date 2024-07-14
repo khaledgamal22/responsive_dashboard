@@ -29,6 +29,7 @@ class _MyCardSectionState extends State<MyCardSection> {
   @override
   Widget build(BuildContext context) {
     return CustomBackGroundContainer(
+      color: Colors.white,
       child: Expanded(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,33 +38,32 @@ class _MyCardSectionState extends State<MyCardSection> {
               'My Card',
               style: AppStyle.styleSemibold20(context),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             MyCardsPageView(
               pageController: pageController,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             DotsIndicators(
               currentPageIndex: currentPageIndex,
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            Divider(
+            const Divider(
               height: 24,
               color: Color(0xffF1F1F1),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
-            TransactionHistorySection(),
+            const TransactionHistorySection(),
           ],
         ),
       ),
-      color: Colors.white,
     );
   }
 }

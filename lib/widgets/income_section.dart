@@ -9,7 +9,7 @@ class IncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomBackGroundContainer(
+    return const CustomBackGroundContainer(
       child: IncomeWidget(),
       color: Colors.white,
     );
@@ -21,7 +21,7 @@ class IncomeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         CustomHeader(

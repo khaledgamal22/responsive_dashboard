@@ -11,9 +11,9 @@ class MyCard extends StatelessWidget {
       aspectRatio: 420 / 215,
       child: Container(
         decoration: BoxDecoration(
-          color: Color(0xff4EB7F2),
+          color: const Color(0xff4EB7F2),
           borderRadius: BorderRadius.circular(12),
-          image: DecorationImage(
+          image: const DecorationImage(
             fit: BoxFit.fill,
             image: AssetImage(Assets.imagesMyCard),
           ),
@@ -36,7 +36,7 @@ class MyCard extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 3,
                         ),
                         Text(
@@ -45,7 +45,7 @@ class MyCard extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Expanded(
+                    const Expanded(
                       child: SizedBox(),
                     ),
                     Image.asset(
@@ -54,7 +54,7 @@ class MyCard extends StatelessWidget {
                   ],
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: SizedBox(
                   height: 40,
                 ),
@@ -71,7 +71,7 @@ class MyCard extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              Flexible(
+              const Flexible(
                 child: SizedBox(
                   height: 12,
                 ),

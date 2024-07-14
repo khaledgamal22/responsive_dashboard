@@ -21,20 +21,20 @@ class IncomeInfoItem extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 12,
         ),
         Text(
           incomeModel.title,
           style: AppStyle.styleRegular16(context),
         ),
-        Expanded(
+        const Expanded(
           child: SizedBox(),
         ),
         Text(
           incomeModel.percentage,
           style: AppStyle.styleMedium16(context).copyWith(
-            color: Color(0xff208CC8),
+            color: const Color(0xff208CC8),
           ),
         )
       ],

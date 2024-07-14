@@ -13,7 +13,7 @@ class CustomTransactionItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 0,
-      color: Color(0xffFAFAFA),
+      color: const Color(0xffFAFAFA),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: ListTile(
@@ -25,13 +25,13 @@ class CustomTransactionItem extends StatelessWidget {
           subtitle: Text(
             transactionModel.subtitle,
             style: AppStyle.styleRegular16(context).copyWith(
-              color: Color(0xffAAAAAA),
+              color: const Color(0xffAAAAAA),
             ),
           ),
           trailing: Text(
             transactionModel.trailing,
             style: AppStyle.styleSemibold20(context).copyWith(
-              color: trailingColor ?? Color(0xff7DD97B),
+              color: trailingColor ?? const Color(0xff7DD97B),
             ),
           ),
         ),

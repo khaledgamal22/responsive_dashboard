@@ -13,14 +13,14 @@ class TabletLayout extends StatelessWidget {
           flex: 1,
           child: CustomDrawer(),
         ),
-        SizedBox(
+        const SizedBox(
           width: 32,
         ),
-        Expanded(
+        const Expanded(
           flex: 3,
           child: MobileLayout(),
         ),
-        SizedBox(
+        const SizedBox(
           width: 32,
         ),
       ],

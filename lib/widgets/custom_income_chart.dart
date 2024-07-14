@@ -41,7 +41,7 @@ class _CustomIncomeChartState extends State<CustomIncomeChart> {
               : AppStyle.styleMedium16(context).copyWith(color: Colors.white),
           radius: activeIndex == 0 ? 70 : 60,
           titlePositionPercentageOffset: activeIndex == 0 ? 1.2 : null,
-          color: Color(0xff208CC8),
+          color: const Color(0xff208CC8),
           value: 40,
         ),
         PieChartSectionData(
@@ -51,7 +51,7 @@ class _CustomIncomeChartState extends State<CustomIncomeChart> {
               : AppStyle.styleMedium16(context).copyWith(color: Colors.white),
           radius: activeIndex == 1 ? 70 : 60,
           titlePositionPercentageOffset: activeIndex == 1 ? 1.5 : null,
-          color: Color(0xff4EB7F2),
+          color: const Color(0xff4EB7F2),
           value: 25,
         ),
         PieChartSectionData(
@@ -61,7 +61,7 @@ class _CustomIncomeChartState extends State<CustomIncomeChart> {
               : AppStyle.styleMedium16(context).copyWith(color: Colors.white),
           radius: activeIndex == 2 ? 70 : 60,
           titlePositionPercentageOffset: activeIndex == 2 ? 1.3 : null,
-          color: Color(0xff064061),
+          color: const Color(0xff064061),
           value: 20,
         ),
         PieChartSectionData(
@@ -71,7 +71,7 @@ class _CustomIncomeChartState extends State<CustomIncomeChart> {
               : AppStyle.styleMedium16(context).copyWith(color: Colors.white),
           radius: activeIndex == 3 ? 70 : 60,
           titlePositionPercentageOffset: activeIndex == 3 ? 1.3 : null,
-          color: Color(0xffE2DECD),
+          color: const Color(0xffE2DECD),
           value: 22,
         ),
       ],

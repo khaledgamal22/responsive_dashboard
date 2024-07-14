@@ -14,10 +14,10 @@ class QuickInvoiceListSec extends StatelessWidget {
           'Latest Transaction',
           style: AppStyle.styleMedium16(context),
         ),
-        SizedBox(
+        const SizedBox(
           height: 3,
         ),
-        QuickInvoiceList(),
+        const QuickInvoiceList(),
       ],
     );
   }

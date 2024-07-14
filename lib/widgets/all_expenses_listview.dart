@@ -37,44 +37,75 @@ class _AllExpensesListViewState extends State<AllExpensesListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-        children: allExpenseslist.asMap().entries.map((e) {
-      if (e.key == 1) {
-        return Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 12,
-            ),
-            child: GestureDetector(
-              onTap: () {
-                updateIndex(e);
-              },
-              child: AllExpensesCard(
-                cardModel: e.value,
-                isActive: cardIndex == e.key,
-              ),
-            ),
-          ),
-        );
-      } else {
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-              updateIndex(e);
+              updateIndex(0);
             },
             child: AllExpensesCard(
-              cardModel: e.value,
-              isActive: cardIndex == e.key,
+              cardModel: allExpenseslist[0],
+              isActive: cardIndex == 0,
             ),
           ),
-        );
-      }
-    }).toList());
+        ),
+        SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(1);
+            },
+            child: AllExpensesCard(
+              cardModel: allExpenseslist[1],
+              isActive: cardIndex == 1,
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(2);
+            },
+            child: AllExpensesCard(
+              cardModel: allExpenseslist[2],
+              isActive: cardIndex == 2,
+            ),
+          ),
+        )
+      ],
+    );
+    // return Row(
+    //     children: allExpenseslist.asMap().entries.map((e) {
+    //   return Expanded(
+    //     child: Padding(
+    //       padding: e.key == 1
+    //           ? const EdgeInsets.symmetric(
+    //               horizontal: 12,
+    //             )
+    //           : EdgeInsets.zero,
+    //       child: GestureDetector(
+    //         onTap: () {
+    //           updateIndex(e);
+    //         },
+    //         child: AllExpensesCard(
+    //           cardModel: e.value,
+    //           isActive: cardIndex == e.key,
+    //         ),
+    //       ),
+    //     ),
+    //   );
+    // }).toList());
   }
 
-  void updateIndex(MapEntry<int, AllExpensesCardModel> e) {
-    if (cardIndex != e.key) {
+  void updateIndex(int index) {
+    if (cardIndex != index) {
       setState(() {
-        cardIndex = e.key;
+        cardIndex = index;
       });
     }
   }

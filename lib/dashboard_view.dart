@@ -30,7 +30,7 @@ class _DashBoardViewState extends State<DashBoardView> {
                 onTap: () {
                   scaffoldKey.currentState!.openDrawer();
                 },
-                child: Icon(
+                child: const Icon(
                   Icons.menu,
                 ),
               ),

@@ -15,7 +15,7 @@ class CustomHeader extends StatelessWidget {
           headtitle,
           style: AppStyle.styleSemibold20(context),
         ),
-        Expanded(
+        const Expanded(
           child: SizedBox(),
         ),
         tail,

@@ -32,20 +32,20 @@ class TransactionHistorySection extends StatelessWidget {
           tail: Text(
             'See all',
             style: AppStyle.styleMedium16(context).copyWith(
-              color: Color(0xff4EB7F2),
+              color: const Color(0xff4EB7F2),
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         Text(
           '13 April 2022',
           style: AppStyle.styleMedium16(context).copyWith(
-            color: Color(0xffAAAAAA),
+            color: const Color(0xffAAAAAA),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 8,
         ),
         Column(
@@ -55,7 +55,7 @@ class TransactionHistorySection extends StatelessWidget {
               if (index == 0) {
                 return CustomTransactionItem(
                   transactionModel: transactionlist[index],
-                  trailingColor: Color(0xffF3735E),
+                  trailingColor: const Color(0xffF3735E),
                 );
               } else {
                 return CustomTransactionItem(

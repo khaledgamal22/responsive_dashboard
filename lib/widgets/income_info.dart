@@ -29,13 +29,13 @@ class IncomeInfo extends StatelessWidget {
     double width = MediaQuery.sizeOf(context).width;
 
     return width > SizeConfig.desktop && width < 1680
-        ? Expanded(child: CustomIncomeChart())
+        ? const Expanded(child: CustomIncomeChart())
         : Row(
             children: [
               Image.asset(
                 Assets.imagesCircle,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Expanded(

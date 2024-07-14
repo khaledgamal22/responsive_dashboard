@@ -17,7 +17,7 @@ class DesktopLayout extends StatelessWidget {
         const SizedBox(
           width: 20,
         ),
-        Expanded(
+        const Expanded(
           flex: 3,
           child: CustomScrollView(
             slivers: [
@@ -25,14 +25,14 @@ class DesktopLayout extends StatelessWidget {
                 hasScrollBody: false,
                 child: Row(
                   children: [
-                    const Expanded(
+                    Expanded(
                       flex: 2,
                       child: MiddlePartWidget(),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 20,
                     ),
-                    const Expanded(
+                    Expanded(
                       flex: 1,
                       child: LastPart(),
                     ),
